@@ -82,28 +82,27 @@ function H = SFHeaviside(x)
 end
 
 ```
-%%Initial condition
+%% Initial condition
 ```
 function v = uinit(x)
     v = 1 - SFHeaviside(x);
 end
 ```
-%%Exac solution
+%% Exact solution
 ```
 function v = exfun(x, t)
     v = uinit(x - t);
 end
 
 ```
-%% Usage
-To run the code, call the AdvEqnUpwindb function with the desired number of grid points M and the Courant number nu. For example:
+%% Usage. To run the code, call the AdvEqnUpwindb function with the desired number of grid points M and the Courant number nu. For example:
 ```
 M = 100; % number of grid points
 nu = 0.5; % Courant number
 AdvEqnUpwindb(M, nu);
 
 ```
-%%License
+%% License
 This project is licensed under the MIT License - see the LICENSE file for details.
 ```
 Feel free to adjust any part of this README to better fit your specific needs or preferences.
